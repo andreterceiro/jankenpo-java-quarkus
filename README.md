@@ -17,6 +17,21 @@ Please execute in the root of the project:
 ```
 
 
+# Interacting with the project in the broswer
+
+Using a browser, please access this address:
+
+```
+http://127.0.0.1:8080/jankenpo?escolha=PEDRA
+```
+
+In the address, where you see PEDRA ou can write:
+
+- PAPEL
+- PEDRA
+- TESOURA
+
+
 # Original README.md
 
 Please see [this file](ORIGINAL_README.md)
