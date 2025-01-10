@@ -2,6 +2,9 @@ package com.example.model;
 
 import java.util.Random;
 
+import jakarta.enterprise.context.ApplicationScoped;
+
+@ApplicationScoped
 public class Jankenpo {
     String[] validMoves = {"PEDRA", "PAPEL", "TESOURA"};
     
@@ -24,9 +27,9 @@ public class Jankenpo {
         }
 
         return switch (userMove) {
-            case "pedra" -> machineMove.equals("tesoura") ? "Você venceu!" : "Você perdeu!";
-            case "papel" -> machineMove.equals("pedra") ? "Você venceu!" : "Você perdeu!";
-            case "tesoura" -> machineMove.equals("papel") ? "Você venceu!" : "Você perdeu!";
+            case "PEDRA" -> machineMove.equals("TESOURA") ? "Você venceu!" : "Você perdeu!";
+            case "PAPEL" -> machineMove.equals("PEDRA") ? "Você venceu!" : "Você perdeu!";
+            case "TESOURA" -> machineMove.equals("PAPEL") ? "Você venceu!" : "Você perdeu!";
             default -> "Jogada inválida!";
         };
     }
