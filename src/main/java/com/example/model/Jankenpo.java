@@ -1,5 +1,7 @@
 package com.example.model;
 
+import java.util.Random;
+
 public class Jankenpo {
     String[] validMoves = {"PEDRA", "PAPEL", "TESOURA"};
     
