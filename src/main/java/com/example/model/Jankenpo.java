@@ -14,5 +14,18 @@ public class Jankenpo {
 
     public String getComputerMove() {
         return this.validMoves[new Random().nextInt(this.validMoves.length)];
+    } 
+
+    public String determineWinner(String userMove, String machineMove) {
+        if (userMove.equals(machineMove)) {
+            return "Empate!";
+        }
+
+        return switch (userMove) {
+            case "pedra" -> machineMove.equals("tesoura") ? "Você venceu!" : "Você perdeu!";
+            case "papel" -> machineMove.equals("pedra") ? "Você venceu!" : "Você perdeu!";
+            case "tesoura" -> machineMove.equals("papel") ? "Você venceu!" : "Você perdeu!";
+            default -> "Jogada inválida!";
+        };
     }
-} 
+}
