@@ -40,3 +40,8 @@ Please see [this file](ORIGINAL_README.md)
 # Changelog
 
 We use [changelog.md](http://changelog.md) site. The link of the changelog of the project there is [this link](https://changelog.md/jankenpo-java-quarkus/changelog).
+
+
+# Roadmap and more
+
+Are available also in [changelog.md](https://changelog.md/jankenpo-java-quarkus/changelog)
