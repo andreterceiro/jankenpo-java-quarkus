@@ -35,3 +35,8 @@ In the address, where you see PEDRA ou can write:
 # Original README.md
 
 Please see [this file](ORIGINAL_README.md)
+
+
+# Changelog
+
+We use [changelog.md](http://changelog.md) site. The link of the changelog of the project there is [this link](https://changelog.md/jankenpo-java-quarkus/changelog).
