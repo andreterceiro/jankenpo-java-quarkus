@@ -11,4 +11,8 @@ public class Jankenpo {
         }
         return false;
     }
+
+    public String getComputerMove() {
+        return this.validMoves[new Random().nextInt(this.validMoves.length)];
+    }
 } 
