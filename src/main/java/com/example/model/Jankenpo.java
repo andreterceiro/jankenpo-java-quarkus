@@ -1,7 +1,7 @@
 package com.example.model;
 
 public class Jankenpo {
-    String[] validMoves = {"pedra", "papel", "tesoura"};
+    String[] validMoves = {"PEDRA", "PAPEL", "TESOURA"};
     
     public Boolean evaluateUserMove(String userMove) {
         for (String validMove: this.validMoves) {
