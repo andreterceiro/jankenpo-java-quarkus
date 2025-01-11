@@ -2,8 +2,9 @@ package com.example;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
+import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
-import jakarta.ws.rs.QueryParam;
+import jakarta.ws.rs.FormParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
@@ -19,7 +20,10 @@ public class JankenpoResource {
     private final Jankenpo jankenpo;
 
     @Inject
-    Template index;
+    Template form;
+
+    @Inject
+    Template process;
 
     @Inject
     public JankenpoResource(Jankenpo jankenpo) {
@@ -28,7 +32,13 @@ public class JankenpoResource {
 
     @GET
     @Produces(MediaType.TEXT_HTML)
-    public TemplateInstance play(@QueryParam("escolha") String userMove) {
+    public TemplateInstance form() {
+        return form.instance();
+    } 
+
+    @POST
+    @Produces(MediaType.TEXT_HTML)
+    public TemplateInstance process(@FormParam("escolha") String userMove) {
         String error = "";
         String computerMove = "";
         String result = "";
@@ -40,18 +50,10 @@ public class JankenpoResource {
             result = this.jankenpo.determineWinner(userMove, computerMove);
         }
 
-        return index
+        return process
             .data("winner", result)
             .data("userMove", userMove)
             .data("error", error)
             .data("computerMove", computerMove);
     }    
-
-    @GET
-    @Path("/test")
-    @Produces(MediaType.TEXT_HTML)
-    public TemplateInstance test() {
-        return index.data("message", "Hello, Qute!");
-    }
-    
 }
