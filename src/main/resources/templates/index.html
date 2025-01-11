@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Jankenpo!</title>
+    </head>
+    <body>
+        {#if error}
+            <p style="color: red;">{error}</p>
+        {#else}
+            <p>Sua escolha: {userMove}</p>
+            <p>Escolha do computador: {computerMove}</p>
+            <p>Resultado: {winner}</p>
+        {/if}
+    </body>
+</html>
