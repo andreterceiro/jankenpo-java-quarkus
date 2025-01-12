@@ -14,7 +14,7 @@ import io.quarkus.qute.TemplateInstance;
 
 import com.example.model.Jankenpo;
 
-@Path("/jankenpo")
+@Path("/")
 public class JankenpoResource {
 
     private final Jankenpo jankenpo;
