@@ -23,14 +23,14 @@ public class Jankenpo {
 
     public String determineWinner(String userMove, String machineMove) {
         if (userMove.equals(machineMove)) {
-            return "Empate!";
+            return "Draw!";
         }
 
         return switch (userMove) {
-            case "ROCK" -> machineMove.equals("SCISSORS") ? "Você venceu!" : "Você perdeu!";
-            case "PAPER" -> machineMove.equals("ROCK") ? "Você venceu!" : "Você perdeu!";
-            case "SCISSORS" -> machineMove.equals("PAPER") ? "Você venceu!" : "Você perdeu!";
-            default -> "Jogada inválida!";
+            case "ROCK" -> machineMove.equals("SCISSORS") ? "You win!" : "You lost!";
+            case "PAPER" -> machineMove.equals("ROCK") ? "You win!" : "You lost!";
+            case "SCISSORS" -> machineMove.equals("PAPER") ? "You win!" : "You lost!";
+            default -> "Invalid choice!";
         };
     }
 }
