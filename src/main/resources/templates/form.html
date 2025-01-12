@@ -1,1 +1,41 @@
-test
+<html>
+    <head>
+        <title>Jankenpo</title>
+        <meta charset="utf-8">
+        <style>
+            .option {
+                border: 1px solid #000;
+                margin-left: 30px;
+                margin-top: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <form name="jankenpoForm" method="post" action="/jankenpo">
+            <input type="hidden" id="userMove" name="userMove" />
+            <div>
+                Please click in your option:
+                <hr />
+                <span>
+                    <img src="/paper.png" class="option" onclick="process('PAPER')" />
+                </span>
+                <span>
+                    <img src="/rock.png" class="option" onclick="process('ROCK')" />
+                </span>
+                <span>
+                    <img src="/scissors.png" class="option" onclick="process('SCISSORS')" />
+                </span>
+            </div>
+        </form>
+       <script>
+            function process(option) {
+                document.getElementById("userMove").value = option;
+                
+                document.jankenpoForm.submit();
+            }
+       </script>
+       <script>
+
+        </script>
+    </body>
+</html>
