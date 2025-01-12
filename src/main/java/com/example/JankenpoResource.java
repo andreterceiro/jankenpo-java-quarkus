@@ -38,7 +38,7 @@ public class JankenpoResource {
 
     @POST
     @Produces(MediaType.TEXT_HTML)
-    public TemplateInstance process(@FormParam("escolha") String userMove) {
+    public TemplateInstance process(@FormParam("userMove") String userMove) {
         String error = "";
         String computerMove = "";
         String result = "";
