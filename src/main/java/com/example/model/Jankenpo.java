@@ -6,7 +6,7 @@ import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class Jankenpo {
-    String[] validMoves = {"PEDRA", "PAPEL", "TESOURA"};
+    String[] validMoves = {"PAPER", "ROCK", "SCISSORS"};
     
     public Boolean evaluateUserMove(String userMove) {
         for (String validMove: this.validMoves) {
@@ -27,9 +27,9 @@ public class Jankenpo {
         }
 
         return switch (userMove) {
-            case "PEDRA" -> machineMove.equals("TESOURA") ? "Você venceu!" : "Você perdeu!";
-            case "PAPEL" -> machineMove.equals("PEDRA") ? "Você venceu!" : "Você perdeu!";
-            case "TESOURA" -> machineMove.equals("PAPEL") ? "Você venceu!" : "Você perdeu!";
+            case "ROCK" -> machineMove.equals("SCISSORS") ? "Você venceu!" : "Você perdeu!";
+            case "PAPER" -> machineMove.equals("ROCK") ? "Você venceu!" : "Você perdeu!";
+            case "SCISSORS" -> machineMove.equals("PAPER") ? "Você venceu!" : "Você perdeu!";
             default -> "Jogada inválida!";
         };
     }
