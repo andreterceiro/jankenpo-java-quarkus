@@ -5,7 +5,15 @@ Here we have a simple Jankenpo game in Java with the Quarkus framework.
 
 # Demonstration
 
+
+# v1.0.0
+
 Please see [this video](https://youtu.be/MNiylaXemsk) - audio in portuguese.
+
+
+# v2.0.0
+
+Please see [this video](https://youtu.be/FUnU2WLoFdg) - audio in portuguese.
 
 
 # Running the project
